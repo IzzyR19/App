@@ -3,7 +3,7 @@ var filetext  = "";
 var fileBinding;
 var fileEntry;
 var ractive;
-var fail;
+
 
 //parameters catch information
 //two types of listeners, web and device
@@ -110,7 +110,7 @@ function displayAsImage(file) {
         
     }
 	
-    
+////////////////////////////////////////////////////////////////    
 //everything onwards is how local storage is accessed
 function onDeviceReady() {
 	console.log("device ready");
