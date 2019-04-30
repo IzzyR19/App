@@ -3,6 +3,7 @@ var filetext  = "";
 var fileBinding;
 var fileEntry;
 var ractive;
+var fail;
 
 //parameters catch information
 //two types of listeners, web and device
