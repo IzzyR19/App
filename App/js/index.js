@@ -2,7 +2,6 @@
 var filetext  = "";
 var fileBinding;
 var fileEntry;
-
 var ractive;
 
 //parameters catch information
