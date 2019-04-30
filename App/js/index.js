@@ -89,6 +89,8 @@ function displayAsImage(file) {
 //functions that make adding to and taking from possible
     function addToList(){     
         
+        console.log("addtolist " + cordova.file);
+        
         books.push(
         { name: $('textarea#titletext').val() , 	author: $('textarea#authortext').val() ,  describe: $('textarea#commenttext').val() }
             );
