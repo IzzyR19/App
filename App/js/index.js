@@ -19,9 +19,9 @@ $(document).on("pagecreate","#pageone", onPageCreated);
 
 
  books = [
-  { name: 'Da Vinci Code', 	author: 'Dan Brown',  describe: 'It is fun and confusing'	},
-  { name: 'Shutter Island',  author: 'Dennis Lehane', describe: 'Good plot twist'	},
-  { name: 'City of Bones',	author: 'Cassandra Clare', describe: 'Cool plot but wow is the series long'},
+  { name: 'Da Vinci Code', 	author: 'Dan Brown',  genre: 'Thriller'	},
+  { name: 'Shutter Island',  author: 'Dennis Lehane', genre: 'Thriller'	},
+  { name: 'City of Bones',	author: 'Cassandra Clare', genre: 'Fantasy'},
 ];
 
 //setup listener for device API load
@@ -42,7 +42,7 @@ function onPageCreated() {
        addToList()
 })
     
-    $('deleteFile').on('tap', function(e){
+    $('#deleteFile').on('tap', function(e){
         takeFromList()
     })
     
@@ -89,10 +89,10 @@ function displayAsImage(file) {
 //functions that make adding to and taking from possible
     function addToList(){     
         
-        console.log("addtolist " + cordova.file);
+       
         
         books.push(
-        { name: $('textarea#titletext').val() , 	author: $('textarea#authortext').val() ,  describe: $('textarea#commenttext').val() }
+        { name: $('textarea#titletext').val() , 	author: $('textarea#authortext').val() ,  genre: $('textarea#commenttext').val() }
             );
         
         console.log(books);
@@ -110,9 +110,10 @@ function displayAsImage(file) {
         
     }
 	
-////////////////////////////////////////////////////////////////    
+
+   
 //everything onwards is how local storage is accessed
-function onDeviceReady() {
+ function onDeviceReady() {
 	console.log("device ready");
      console.log(cordova.file);
 	
@@ -173,6 +174,7 @@ function writeFile(text) {
 			writer.write(filetext);
 		}, 
 		fail
-	);
+	); 
 
-}
+} 
+ 

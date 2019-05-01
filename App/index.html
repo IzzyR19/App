@@ -20,7 +20,7 @@
         <ul>
          {{#each booklist}}
 			<li> {{name}}: {{author}}</li>
-            <li>{{describe}} </li>
+            <li>{{genre}} </li>
             <li> {{}} </li>
 			 {{/each}}
 		</ul> 
@@ -46,6 +46,7 @@
   
   		<div data-role="footer" data-position="fixed">
     		<a href="#pagetwo" data-role="button">Add New Entry</a>
+            <a href="#pagethree" data-role="button"> Delete an Entry</a>
   		</div>
 	</div>
     
@@ -70,13 +71,48 @@
                     <label for="textarea" id="name">Author:</label>
           			<textarea cols="40" rows="8" name="textarea" id="authortext" value=''></textarea> 
                 
-                    <label for="textarea" id="review">Comment:</label>
+                    <label for="textarea" id="review">Genre:</label>
           			<textarea cols="40" rows="8" name="textarea" id="commenttext" value=''></textarea> 
             </div>
             
             
-              	<button id="writeFile">Add to List</button>
-                <button id="deleteFile"> Delete from List</button>
+              	<button id="writeFile">Add to Library</button>
+                
+            <div id="listcontent">
+                
+            </div>
+            
+  		</div>
+  
+  		<div data-role="footer" data-position="fixed">
+    		<a href="#pageone" data-role="button">Back to Library</a>
+            <a href="#pagethree" data-role="button"> Delete an Entry</a>
+            
+        
+  		</div>
+	</div>
+    
+    <!-- page three -->
+    <div data-role="page" id="pagethree">
+  
+  		<div data-role="header" data-position="fixed">
+    		<h1>Header</h1>
+  		</div>
+  
+  		<div data-role="content" id="content">
+            
+            <div id='container' data-role="fieldcontain">
+                    <label for="textarea" id="author">Title:</label>
+          			<textarea cols="40" rows="8" name="textarea" id="titletext" value=''></textarea> 
+                
+                    <label for="textarea" id="name">Author:</label>
+          			<textarea cols="40" rows="8" name="textarea" id="authortext" value=''></textarea> 
+                
+                    <label for="textarea" id="review">Genre:</label>
+          			<textarea cols="40" rows="8" name="textarea" id="commenttext" value=''></textarea> 
+            </div>
+          
+            <button id="deleteFile"> Delete from Library</button>
 
             <div id="listcontent">
                 
@@ -86,10 +122,13 @@
   
   		<div data-role="footer" data-position="fixed">
     		<a href="#pageone" data-role="button">Back to Library</a>
+            <a href="#pagetwo" data-role="button"> Add New Entry</a>
             
         
   		</div>
 	</div>
+    
+    
     
 </body>
 </html>
