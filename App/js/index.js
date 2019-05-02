@@ -108,6 +108,7 @@ function displayAsImage(file) {
         
        books.splice(
        { name: $('textarea#titletext').val() }
+           );
         
         ractive.update(); 
         
