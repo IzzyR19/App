@@ -184,6 +184,9 @@ function writeFile(text) {
 
 }
 
+function fail(error) {
+    alert("DFidn't worry, sorry :(" + error.message);
+}
 
 
  
