@@ -107,8 +107,7 @@ function displayAsImage(file) {
     function takeFromList(){
         
        books.splice(
-       { name: $('textarea#titletext').val()}
-       );
+       { name: $('textarea#titletext').val() , 	author: $('textarea#authortext').val() ,  genre: $('textarea#commenttext').val() }
         
         ractive.update(); 
         
@@ -119,7 +118,8 @@ function displayAsImage(file) {
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////
    
 //everything onwards is how local storage is accessed
- function onDeviceReady() {
+ 
+function onDeviceReady() {
 	console.log("device ready");
      console.log(cordova.file);
 	
