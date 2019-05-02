@@ -106,11 +106,17 @@ function displayAsImage(file) {
     
     function takeFromList(){
         
-       
+       books.splice(
+       { name: $('textarea#titletext').val()}
+       );
+        
+        ractive.update(); 
+        
+        
         
     }
 	
-
+////////////////////////////////////////////////////////////////////////////////////////////////////////////
    
 //everything onwards is how local storage is accessed
  function onDeviceReady() {
@@ -165,7 +171,7 @@ function readAsText(file) {
 
 //UDPATE file contents - called when submit button is pressed
 function writeFile(text) {
-    console.log("writeFile: "  + fileEntry.fullPath);
+   // console.log("writeFile: "  + fileEntry.fullPath);
     
     filetext = text;
     
@@ -176,5 +182,8 @@ function writeFile(text) {
 		fail
 	); 
 
-} 
+}
+
+
+
  
