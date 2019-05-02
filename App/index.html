@@ -17,13 +17,14 @@
 	<!-- the template for the layout of the library -->
     <script id='template' type='text/ractive'>
 		
-        <ul>
-         {{#each booklist}}
-			<li> {{name}}: {{author}}</li>
+    
+        {{#each booklist}}
+        <ol>
+            <li> {{name}}: {{author}}</li>
             <li>{{genre}} </li>
-            <li> {{}} </li>
-			 {{/each}}
-		</ul> 
+          </ol>  
+        {{/each}}
+     
         
     </script> 
     
