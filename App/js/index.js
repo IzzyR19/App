@@ -107,7 +107,7 @@ function displayAsImage(file) {
     function takeFromList(){
         
        books.splice(
-       { name: $('textarea#titletext').val() , 	author: $('textarea#authortext').val() ,  genre: $('textarea#commenttext').val() }
+       { name: $('textarea#titletext').val() }
         
         ractive.update(); 
         
