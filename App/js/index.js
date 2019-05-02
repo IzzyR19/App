@@ -3,7 +3,7 @@ var filetext  = "";
 var fileBinding;
 var fileEntry;
 var ractive;
-var delete; 
+
 
 //parameters catch information
 //two types of listeners, web and device
@@ -65,32 +65,7 @@ function onPageCreated() {
 
 //makes the camera open
 function displayAsImage(file) {
-    // Check that the browser supports getUserMedia.
-// If it doesn't show an alert, otherwise continue.
-if (navigator.getUserMedia) {
-  // Request the camera.
-  navigator.getUserMedia(
-    // Constraints
-    {
-      video: true
-    },
-
-    // Success Callback
-    function(localMediaStream) {
-
-    },
-
-    // Error Callback
-    function(err) {
-      // Log the error to the console.
-      console.log('The following error occurred when trying to use getUserMedia: ' + err);
-    }
-  );
-
-} else {
-  alert('Sorry, your browser does not support getUserMedia');
-} }
-	/*
+    
 	//create a HTML image
   	var imgURL = URL.createObjectURL(file);
   	var img = document.createElement('img');
@@ -110,7 +85,7 @@ if (navigator.getUserMedia) {
   	//insert the image intothe DOM so its displayed.
   	$('#imagePreview').html(img);
 }
-*/
+
 //functions that make adding to and taking from possible
     function addToList(){     
         
