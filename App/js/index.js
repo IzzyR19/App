@@ -115,6 +115,34 @@ function displayAsImage(file) {
         
         
     }
+
+//the shake feature
+function startSensor() {
+	watchID = navigator.accelerometer.watchAcceleration( accelerometerSuccess, accelerometerError, accelerometerOptions);
+}
+
+
+function stopSensor() {
+	navigator.accelerometer.clearWatch(watchID);
+			
+	$('#sensorX').val("");
+	$('#sensorY').val("");
+	$('#sensorZ').val("");
+	$('#timestamp').val("");
+}
+
+function accelerometerSuccess(acceleration) {
+	
+	$('#sensorX').val(acceleration.x);
+	$('#sensorY').val(acceleration.y);
+	$('#sensorZ').val(acceleration.z);
+	$('#timestamp').val(acceleration.timestamp);
+    alert("Awesome! You shook me! Sorry, but my feature isn't working just yet, try again another time :)");
+}
+
+function accelerometerError() {
+   alert('Error');
+}
 	
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////
    
@@ -186,7 +214,7 @@ function writeFile(text) {
 }
 
 function fail(error) {
-    alert("Didn't worry, sorry :(" + error.message);
+    alert("Didn't work, sorry :(" + error.message);
 }
 
 
