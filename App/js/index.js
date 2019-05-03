@@ -3,6 +3,7 @@ var filetext  = "";
 var fileBinding;
 var fileEntry;
 var ractive;
+var shake;
 
 
 //parameters catch information
@@ -116,8 +117,10 @@ function displayAsImage(file) {
         
     }
 
+
 //the shake feature
-function startSensor() {
+
+/* function startSensor() {
 	watchID = navigator.accelerometer.watchAcceleration( accelerometerSuccess, accelerometerError, accelerometerOptions);
 }
 
@@ -137,12 +140,28 @@ function accelerometerSuccess(acceleration) {
 	$('#sensorY').val(acceleration.y);
 	$('#sensorZ').val(acceleration.z);
 	$('#timestamp').val(acceleration.timestamp);
-    alert("Awesome! You shook me! Sorry, but my feature isn't working just yet, try again another time :)");
+    onShake();
+
 }
 
 function accelerometerError() {
    alert('Error');
+    onError();
 }
+
+var onShake = function onShake(){
+    alert("Hey, you shook me! Awesome! Sorry, my feature doesn't work just yet, try again another time :)");
+ 
+    console.log("I'm read");
+}
+
+var onError = function onError(){
+    alert("Oh dear.. something went wrong when you tried to do that.. sorry!");
+    
+    console.log("I'm read too");
+} */
+
+
 	
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////
    
