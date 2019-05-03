@@ -10,12 +10,12 @@
         <script src="ractive/ractive.js"></script>
         <script src="cordova.js"> </script> 
     	<script src="js/index.js"></script>
-    <link rel="stylesheet" type = "text/css" href="styles.css">
+    <link rel="stylesheet" href="styles.css">
     
 
 </head>
 
-<body>
+<body id='body'>
     
 	<!-- the template for the layout of the library -->
     <script id='template' type='text/ractive'>
@@ -35,7 +35,7 @@
     <div data-role="page" id="pageone">
   
   		<div data-role="header" data-position="fixed">
-    		<h1>Library</h1>
+    		<h1 id="h1">Library</h1>
   		</div>
   
   		<div data-role="content" id="content">
@@ -51,6 +51,7 @@
   		<div data-role="footer" data-position="fixed">
     		<a href="#pagetwo" data-role="button">Add New Entry</a>
             <a href="#pagethree" data-role="button"> Delete an Entry</a>
+            <a href="#pagefour" data-role="button"> Change Theme</a>
   		</div>
 	</div>
     
@@ -60,7 +61,7 @@
     <div data-role="page" id="pagetwo">
   
   		<div data-role="header" data-position="fixed">
-    		<h1>Add a Book</h1>
+    		<h1 id="h1">Add a Book</h1>
   		</div>
   
   		<div data-role="content" id="content">
@@ -94,6 +95,7 @@
     		<a href="#pageone" data-role="button">Back to Library</a>
             <a href="#pagethree" data-role="button"> Delete an Entry</a>
             
+            
         
   		</div>
 	</div>
@@ -102,7 +104,7 @@
     <div data-role="page" id="pagethree">
   
   		<div data-role="header" data-position="fixed">
-    		<h1>Delete a Book</h1>
+    		<h1 id="h1">Delete a Book</h1>
   		</div>
   
   		<div data-role="content" id="content">
@@ -131,6 +133,31 @@
             <a href="#pagetwo" data-role="button"> Add New Entry</a>
             
         
+  		</div>
+	</div>
+    
+    <!-- page four -->
+    <div data-role="page" id="pagefour">
+  
+  		<div data-role="header" data-position="fixed">
+    		<h1 id="h1">Themes</h1>
+  		</div>
+  
+  		<div data-role="content" id="content">
+            
+            <button id="green"> Green Theme</button>
+            <button id="blue"> Blue Theme</button>
+            <button id="red"> Red Theme</button>
+            <button id="night"> Dark Theme</button>
+            <button id="boring"> Revert</button>
+            
+  		</div>
+  
+  		<div data-role="footer" data-position="fixed">
+            <a href="#pageone" data-role="button"> Back to Library</a>
+    		<a href="#pagetwo" data-role="button">Add New Entry</a>
+            <a href="#pagethree" data-role="button"> Delete an Entry</a>
+            
   		</div>
 	</div>
     

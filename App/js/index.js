@@ -47,8 +47,26 @@ function onPageCreated() {
         takeFromList()
     })
     
-   
+    $('#green').on('tap', function(e){
+        alert("I know you wanted a green theme but sorry, it's not available..");
+    })
 	
+    $('#blue').on('tap', function(e){
+        alert("I know you wanted a blue theme but sorry, it's not available..");
+    })
+    
+    $('#red').on('tap', function(e){
+        alert("I know you wanted a red theme but sorry, it's not available..");
+    })
+    
+    $('#night').on('tap', function(e){
+        alert("I know you wanted a dark theme (me too honestly) but sorry, it's not available..");
+    })
+    
+    $('#boring').on('tap', function(e){
+        alert("Well, rather unfortunately, you already have this theme. Nothing to revert!");
+    })
+    
      ractive = new Ractive({
 		  // The `el` option can be a node, an ID, or a CSS selector.
 		  el: '#listcontent',
@@ -113,53 +131,10 @@ function displayAsImage(file) {
         
         ractive.update(); 
         
-        
-        
     }
 
-
-//the shake feature
-
-/* function startSensor() {
-	watchID = navigator.accelerometer.watchAcceleration( accelerometerSuccess, accelerometerError, accelerometerOptions);
-}
-
-
-function stopSensor() {
-	navigator.accelerometer.clearWatch(watchID);
-			
-	$('#sensorX').val("");
-	$('#sensorY').val("");
-	$('#sensorZ').val("");
-	$('#timestamp').val("");
-}
-
-function accelerometerSuccess(acceleration) {
-	
-	$('#sensorX').val(acceleration.x);
-	$('#sensorY').val(acceleration.y);
-	$('#sensorZ').val(acceleration.z);
-	$('#timestamp').val(acceleration.timestamp);
-    onShake();
-
-}
-
-function accelerometerError() {
-   alert('Error');
-    onError();
-}
-
-var onShake = function onShake(){
-    alert("Hey, you shook me! Awesome! Sorry, my feature doesn't work just yet, try again another time :)");
- 
-    console.log("I'm read");
-}
-
-var onError = function onError(){
-    alert("Oh dear.. something went wrong when you tried to do that.. sorry!");
     
-    console.log("I'm read too");
-} */
+
 
 
 	
